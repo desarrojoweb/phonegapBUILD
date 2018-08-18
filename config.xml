@@ -1,0 +1,12 @@
+<widget id="com.desarrojoweb.linuxwebapp" version="0.0.1">
+        <name>Linux Comander | Básico</name>
+        <description>
+            Aprende los comandos básicos de Linux
+        </description>
+        <author email="desarrojoweb@gmail.com" href="http://desarrojoweb.com">
+           desarrojoweb.com
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+        <preference name="orientation" value="portrait" />
+</widget>

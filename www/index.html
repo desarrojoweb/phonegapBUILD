@@ -1,0 +1,682 @@
+<!doctype html>
+<html>
+<head>
+<title>Linux Comander</title>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="css/themes/linux.min.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+
+<script src="jquery-mobile/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- PRIMERA PAGINA ********************************************************************************* -->
+
+<div data-role="page" id="inicio" data-theme="a">
+  <div data-role="header" data-theme="a">
+  	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
+   	
+    <h1>Comandos Linux</h1>
+    
+  </div>
+  <div data-role="content">
+  	<ul data-role="listview">
+  		
+  		<li><a href="#ayuda">Comandos de Ayuda</a></li>
+  		<li><a href="#archivos">Archivos y Directorios</a></li>
+		<li><a href="#usuarios">Usuarios, Grupos y Permisos</a> </li>
+		<li><a href="#paquetes">Gestión de Paquetes en Ubuntu-Debian</a> </li>
+		<li><a href="#apagar">Apagar, Reiniciar, Cerrar Sesión</a></li>
+		<li><a href="#monitor">Monitorización y Depuración</a></li>
+		<li><a href="#operadores">Operadores</a></li>
+  		
+  	</ul>
+  
+  </div>
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#ayuda" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- SEGUNDA PAGINA ***************************************************************************** -->
+
+
+<div data-role="page" id="archivos" data-theme="a">
+  <div data-role="header">
+	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
+    <h1>Comandos Linux - ARCHIVOS -</h1>
+  </div>
+  
+  
+  <div data-role="content">
+	<form><input data-type="search" id="archivo" />  </form>
+	<div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#archivo">
+       
+        <div data-role="collapsible" data-filtertext="pwd">
+            <h3 data-inset="false">pwd</h3>
+            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+            
+             <h4 style="margin-left: 2em;">Ejemplo del comando</h4> 		
+             <ul data-role="listview" >
+               		
+				<li><b>pwd</b> <em>Muestra en qué lugar del árbol de directorio nos encontramos</em></li>
+          
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="ls">
+            <h3  data-inset="false">ls</h3>
+            <p>Lista los ficheros contenidos en el directorio actual con código de colores y además permite argumentos que amplían su función</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>ls -a</b> <em>muestra los archivos ocultos (todos aquellos que empiezan por un punto)</em></li>
+                <li><b>ls -l</b> <em>información extra de los ficheros contenidos en el directorio donde nos encontramos. Muy útil para saber qué permisos tienen concedidos los ficheros.</em></li>
+                <li><b>ls -la</b> <em>Unión de los argumentos. Muestra archivos ocultos y permisos de los archivos contenidos dentro del directorio donde estamos ubicados.</em></li>
+                
+            </ul>
+        </div>
+        
+           
+        <div data-role="collapsible" data-filtertext="dir">
+            <h3  data-inset="false">dir</h3>
+            <p>lista los ficheros contenidos en el directorio actual</p>
+                       
+        </div>
+        
+        
+        <div data-role="collapsible" data-filtertext="mkdir">
+            <h3  data-inset="false">mkdir</h3>
+            <p>Crea directorios</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>mkdir /home/pepe/documentos/arhivoacrear</b> <em>Crea archivo en ruta especificada</em></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="cd">
+            <h3  data-inset="false">cd</h3>
+            <p>Utilidad para navegar por el árbol de directorios. Podemos entrar y salir de un directorio gracias a este comando</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>cd ..</b> <em>ir a directorio .. es decir, al directorio inmeditamente superior</em></li>
+                <li><b>cd .</b> <em>ir al directorio actual, en realidad esto no supone ningún cambio pero aprendemos que en todos las carpetas de Linux siempre hay dos directorios aunque éste esté vacio. El fichero dos puntos (inmeditamente superior) y el punto (el mismo directorio)</em></li>
+                <li><b>cd ~</b> <em>nos dirijimos al directorio home del usuario con el que estemos logueados</em></li>
+                <li><b>cd /home/pepe/documentos</b> <em>nos dirijimos al directorio documentos del usuario pepe</em></li>
+                
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="rm">
+            <h3  data-inset="false">rm</h3>
+            <p>Elimina ficheros (y directorios)</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>rm /home/pepe/descargas/libro.pdf</b> <em>elimina libro.pdf</em></li>
+                <li><b>rm -r /home/pepe/descargas/libros/</b> <em>Elimina el directorio libros y todo sus contenidos. La -r indica que borre todo el contenido ubicado dentro de la ruta indicada. (Recursivo)</em></li>
+            </ul>
+        </div>
+        
+         <div data-role="collapsible" data-filtertext="rmdir">
+            <h3  data-inset="false">rmdir</h3>
+            <p>Elimina un directorio</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>rmdir /home/pepe/descargas/libros/</b> <em>Elimina el directorio libros.</em></li>
+            </ul>
+        </div>
+        
+         <div data-role="collapsible" data-filtertext="cp">
+            <h3  data-inset="false">cp</h3>
+            <p>Copia ficheros</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>cp /home/pepe/descargas/libro.pdf /home/pepe/documentos/libros/</b> <em>copia libro.pdf dentro del directorio libros ubicado en documentos del usuario pepe</em></li>
+                
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="mv">
+            <h3  data-inset="false">mv</h3>
+            <p>Mover o Renombrar</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>mv /home/pepe/descargas/libro.pdf /home/pepe/documentos/libros/</b> <em>mueve libro.pdf dentro del directorio libros ubicado en documentos del usuario pepe</em></li>
+                <li><b>mv Istoria Historia</b> <em>Cambia el nombre Istoria por Historia</em></li>
+                
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="cat">
+            <h3  data-inset="false">cat</h3>
+            <p>Muestra el contenido de un archivo</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>cat /etc/passwd</b> <em>Muestra el contenido del archivo passwd</em></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="more">
+            <h3  data-inset="false">more</h3>
+            <p>Muestra contenido de un archivo, haciendo pausas por líneas</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>more /etc/passwd</b> <em>Muestra contenido de passwd con pausas por cada línea</em></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="less">
+            <h3  data-inset="false">less</h3>
+            <p>Muestra contenido de un archivo pudiendo hacer scroll en la consola con las teclas de dirección</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>less /etc/passwd</b> <em>Muestra passwd y podemos movernos por el archivo arriba y abajo</em></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="df">
+            <h3  data-inset="false">df</h3>
+            <p>Muestra espacio libre de los discos o las particiones</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>df -h</b> <em>Muestra los datos del espacio libre de forma comprensible para los humanos</em></li>
+                <li><b>df -m</b> <em>muestra espacio libre en megabytes</em></li>
+                <li><b>df -k</b> <em>Muestra en blokes de 1Kb (por defecto)</em></li>
+                <li><b>df -T</b> <em>Muestra tipo de sistema de archivos</em></li>
+                <li><b>df -i</b> <em>Muestra los inodos del sistemas</em></li>
+                
+            </ul>
+        </div>
+        
+        
+    </div>
+ </div>
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#usuarios" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+  </div>
+
+</div>
+
+<!-- TERCERA PAGINA *************** -->
+
+
+<div data-role="page" id="usuarios" data-theme="a">
+  <div data-role="header">
+	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
+    <h1>Comandos Linux - USUARIOS -</h1>
+  </div>
+  
+  
+  <div data-role="content">
+  <form>
+    <input data-type="search" id="usuario" />
+  </form>
+    <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="usuariox" data-input="#usuario">
+       
+        <div data-role="collapsible" data-filtertext="pwd">
+            <h3 data-inset="false">pwd</h3>
+            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+            
+             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+               		
+				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
+                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="ls">
+            <h3  data-inset="false">ls</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                
+            </ul>
+        </div>
+        
+           
+        <div data-role="collapsible" data-filtertext="cd">
+            <h3  data-inset="false">cd</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#paquetes" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+  </div>
+
+</div>
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- 4 PAGINA ***************************************************************************** -->
+
+<div data-role="page" id="paquetes" data-theme="a">
+  <div data-role="header">
+	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
+    <h1>Comandos Linux - PAQUETES -</h1>
+  </div>
+  
+  
+ <div data-role="content">
+  <form>
+    <input data-type="search" id="paquete" />
+  </form>
+    <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="paquetex" data-input="#paquete">
+       
+        <div data-role="collapsible" data-filtertext="pwd">
+            <h3 data-inset="false">pwd</h3>
+            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+            
+             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+               		
+				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
+                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="ls">
+            <h3  data-inset="false">ls</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                
+            </ul>
+        </div>
+        
+           
+        <div data-role="collapsible" data-filtertext="cd">
+            <h3  data-inset="false">cd</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+  </div>
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#apagar" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+  </div>
+
+</div>
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+ 
+</div>
+
+<!-- CUARTA PAGINA ******************************************************************************* -->
+
+<div data-role="page" id="apagar" data-theme="a">
+  <div data-role="header">
+	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
+    <h1>Comandos Linux - APAGAR, REINICIAR -</h1>
+  </div>
+  
+  
+  <div data-role="content">
+  <form>
+    <input data-type="search" id="apaga" />
+  </form>
+    <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="apagado" data-input="#apaga">
+       
+        <div data-role="collapsible" data-filtertext="pwd">
+            <h3 data-inset="false">pwd</h3>
+            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+            
+             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+               		
+				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
+                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="ls">
+            <h3  data-inset="false">ls</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                
+            </ul>
+        </div>
+        
+           
+        <div data-role="collapsible" data-filtertext="cd">
+            <h3  data-inset="false">cd</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+ </div>
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#monitor" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- 5 pagina ********************************************************************************* -->
+
+
+<div data-role="page" id="monitor" data-theme="a">
+  <div data-role="header">
+	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
+    <h1>Comandos Linux - MONITORIZACIÓN -</h1>
+  </div>
+  
+  
+ <div data-role="content">
+  <form>
+    <input data-type="search" id="moni" />
+  </form>
+    <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="monit" data-input="#moni">
+       
+        <div data-role="collapsible" data-filtertext="pwd">
+            <h3 data-inset="false">pwd</h3>
+            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+            
+             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+               		
+				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
+                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="ls">
+            <h3  data-inset="false">ls</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                
+            </ul>
+        </div>
+        
+           
+        <div data-role="collapsible" data-filtertext="cd">
+            <h3  data-inset="false">cd</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+ </div>
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#operadores" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- 6 pagina ************************************************************************************* -->
+
+<div data-role="page" id="operadores" data-theme="a">
+  <div data-role="header">
+	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
+    <h1>Comandos Linux - OPERADORES -</h1>
+  </div>
+  
+  
+  <div data-role="content">
+  <form>
+    <input data-type="search" id="opera" />
+  </form>
+    <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="operax" data-input="#opera">
+       
+        <div data-role="collapsible" data-filtertext="pwd">
+            <h3 data-inset="false">pwd</h3>
+            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+            
+             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+               		
+				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
+                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="ls">
+            <h3  data-inset="false">ls</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                
+            </ul>
+        </div>
+        
+           
+        <div data-role="collapsible" data-filtertext="cd">
+            <h3  data-inset="false">cd</h3>
+            <p>Lista el contenido del directorio actual del promnt</p>
+           
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
+                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</div>
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#ayuda" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- 7PAG **************************************************************************************** -->
+
+<div data-role="page" id="ayuda" data-theme="a">
+  <div data-role="header">
+	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
+    <h1>Comandos Linux - AYUDA y MANUALES -</h1>
+  </div>
+  
+  
+<div data-role="content">
+  <form>
+    <input data-type="search" id="ayudar" />
+  </form>
+    <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="ayudax" data-input="#ayudar">
+       
+        <div data-role="collapsible" data-filtertext="man">
+            <h3 data-inset="false">man</h3>
+            <p>manual completo de un comando</p>
+            
+             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+               		
+				<li><b>man man</b> <em>muestra manual del comando man</em></li>
+                <li><b>man ls</b> <em>muestra manual del comando ls</em></li>
+                <li><b>man mount</b> <em>muestra manual del comando mount</em></li>
+               
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="help">
+            <h3  data-inset="false">--help</h3>
+            <p>muestra una ayuda rápida de un comando cualquiera</p>
+           
+               
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
+            <ul data-role="listview" >
+                <li><b>ls --help</b> <em>Muesrtra una ayuda básica del comando ls</em></li>
+                <li><b>mount --help</b> <em>Muestra una ayuda básica del comando mount</em></li>
+                <li><b>mkdir --help</b> <em>Muestra una ayuda básica del comando mkdir</em></li>
+                
+            </ul>
+        </div>
+        
+           
+        <div data-role="collapsible" data-filtertext="whatis">
+            <h3  data-inset="false">whatis</h3>
+            <p>Ayuda muy breve de cualquier comando. Información muy reducida</p>
+           
+            <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>whatis mount</b> <em>Muestra para qué sirve mount, pero no cómo se usa.</em></li>
+                              
+            </ul>
+        </div>
+        
+    </div>
+ </div>    
+  
+  <div data-role="footer" data-position="fixed" data-id="fotterx">
+    <div style="margin-left: 3.6em; " class="ui-grid-b">
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
+      <div class="ui-block-c"><a href="#archivos" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+    </div>
+    
+  </div>
+</div>
+
+	
+</body>
+</html>
