@@ -1,8 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
-.centrado {
+li p {
 	
-	text-align: center;
+	white-space: normal !important; 
+	text-overflow:clip !important;
+	
 }
 
+
+
+
+	

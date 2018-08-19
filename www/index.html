@@ -9,9 +9,24 @@
 <link rel="stylesheet" href="jquery-mobile/jquery.mobile-1.4.5.min.css" />
 <link rel="stylesheet" href="css/themes/linux.min.css" />
 <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="css/css.css" />
+
+<style>
+
+
+	
+	
+</style>
+
+
 
 <script src="jquery-mobile/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+
+
+
+
+
 </head>
 
 <body>
@@ -22,7 +37,7 @@
   <div data-role="header" data-theme="a">
   	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
    	
-    <h1>Comandos Linux</h1>
+    <h1>Linux Comander</h1>
     
   </div>
   <div data-role="content">
@@ -56,7 +71,7 @@
 <div data-role="page" id="archivos" data-theme="a">
   <div data-role="header">
 	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-    <h1>Comandos Linux - ARCHIVOS -</h1>
+    <h1>- ARCHIVOS -</h1>
   </div>
   
   
@@ -67,13 +82,10 @@
         <div data-role="collapsible" data-filtertext="pwd">
             <h3 data-inset="false">pwd</h3>
             <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
-            
-             <h4 style="margin-left: 2em;">Ejemplo del comando</h4> 		
+            <h4 style="margin-left: 2em;">Ejemplo del comando</h4> 		
              <ul data-role="listview" >
-               		
-				<li><b>pwd</b> <em>Muestra en qué lugar del árbol de directorio nos encontramos</em></li>
-          
-            </ul>
+               	<li><b>pwd</b> <p><em>Muestra en qué lugar del árbol de directorio nos encontramos</em></p></li>
+          	 </ul>
         </div>
         
         <div data-role="collapsible" data-filtertext="ls">
@@ -83,9 +95,9 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <em>muestra los archivos ocultos (todos aquellos que empiezan por un punto)</em></li>
-                <li><b>ls -l</b> <em>información extra de los ficheros contenidos en el directorio donde nos encontramos. Muy útil para saber qué permisos tienen concedidos los ficheros.</em></li>
-                <li><b>ls -la</b> <em>Unión de los argumentos. Muestra archivos ocultos y permisos de los archivos contenidos dentro del directorio donde estamos ubicados.</em></li>
+                <li><b>ls -a</b> <p><em>muestra los archivos ocultos (todos aquellos que empiezan por un punto)</em></p></li>
+                <li><b>ls -l</b> <p><em>información extra de los ficheros contenidos en el directorio donde nos encontramos. Muy útil para saber qué permisos tienen concedidos los ficheros.</em></p></li>
+                <li><b>ls -la</b> <p><em>Unión de los argumentos. Muestra archivos ocultos y permisos de los archivos contenidos dentro del directorio donde estamos ubicados.</em></p></li>
                 
             </ul>
         </div>
@@ -105,7 +117,7 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>mkdir /home/pepe/documentos/arhivoacrear</b> <em>Crea archivo en ruta especificada</em></li>
+                <li><b>mkdir /home/pepe/documentos/arhivoacrear</b> <p><em>Crea archivo en ruta especificada</em></p></li>
             </ul>
         </div>
         
@@ -116,10 +128,10 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>cd ..</b> <em>ir a directorio .. es decir, al directorio inmeditamente superior</em></li>
-                <li><b>cd .</b> <em>ir al directorio actual, en realidad esto no supone ningún cambio pero aprendemos que en todos las carpetas de Linux siempre hay dos directorios aunque éste esté vacio. El fichero dos puntos (inmeditamente superior) y el punto (el mismo directorio)</em></li>
-                <li><b>cd ~</b> <em>nos dirijimos al directorio home del usuario con el que estemos logueados</em></li>
-                <li><b>cd /home/pepe/documentos</b> <em>nos dirijimos al directorio documentos del usuario pepe</em></li>
+                <li><b>cd ..</b> <p><em>ir a directorio .. es decir,<br /> al directorio inmeditamente superior</em></p></li>
+                <li><b>cd .</b> <p><em>ir al directorio actual, en realidad esto no supone ningún cambio pero aprendemos que en todos las carpetas de Linux siempre hay dos directorios aunque éste esté vacio. El fichero dos puntos (inmeditamente superior) y el punto (el mismo directorio)</em></p></li>
+                <li><b>cd ~</b> <p><em>nos dirijimos al directorio home del usuario con el que estemos logueados</em></p></li>
+                <li><b>cd /home/pepe/documentos</b> <p><em>nos dirijimos al directorio documentos del usuario pepe</em></p></li>
                 
             </ul>
         </div>
@@ -131,8 +143,8 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>rm /home/pepe/descargas/libro.pdf</b> <em>elimina libro.pdf</em></li>
-                <li><b>rm -r /home/pepe/descargas/libros/</b> <em>Elimina el directorio libros y todo sus contenidos. La -r indica que borre todo el contenido ubicado dentro de la ruta indicada. (Recursivo)</em></li>
+                <li><b>rm /home/pepe/descargas/libro.pdf</b> <p><em>elimina libro.pdf</em></p></li>
+                <li><b>rm -r /home/pepe/descargas/libros/</b> <p><em>Elimina el directorio libros y todo sus contenidos. La -r indica que borre todo el contenido ubicado dentro de la ruta indicada. (Recursivo)</em></p></li>
             </ul>
         </div>
         
@@ -143,7 +155,7 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>rmdir /home/pepe/descargas/libros/</b> <em>Elimina el directorio libros.</em></li>
+                <li><b>rmdir /home/pepe/descargas/libros/</b> <p><em>Elimina el directorio libros.</em></p></li>
             </ul>
         </div>
         
@@ -154,7 +166,7 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>cp /home/pepe/descargas/libro.pdf /home/pepe/documentos/libros/</b> <em>copia libro.pdf dentro del directorio libros ubicado en documentos del usuario pepe</em></li>
+                <li><b>cp /home/pepe/descargas/libro.pdf /home/pepe/documentos/libros/</b> <p><em>copia libro.pdf dentro del directorio libros ubicado en documentos del usuario pepe</em></p></li>
                 
             </ul>
         </div>
@@ -166,8 +178,8 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>mv /home/pepe/descargas/libro.pdf /home/pepe/documentos/libros/</b> <em>mueve libro.pdf dentro del directorio libros ubicado en documentos del usuario pepe</em></li>
-                <li><b>mv Istoria Historia</b> <em>Cambia el nombre Istoria por Historia</em></li>
+                <li><b>mv /home/pepe/descargas/libro.pdf /home/pepe/documentos/libros/</b> <p><em>mueve libro.pdf dentro del directorio libros ubicado en documentos del usuario pepe</em></p></li>
+                <li><b>mv Istoria Historia</b> <p><em>Cambia el nombre Istoria por Historia</em></p></li>
                 
             </ul>
         </div>
@@ -179,7 +191,7 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>cat /etc/passwd</b> <em>Muestra el contenido del archivo passwd</em></li>
+                <li><b>cat /etc/passwd</b> <p><em>Muestra el contenido del archivo passwd</em></p></li>
             </ul>
         </div>
         
@@ -190,7 +202,7 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>more /etc/passwd</b> <em>Muestra contenido de passwd con pausas por cada línea</em></li>
+                <li><b>more /etc/passwd</b> <p><em>Muestra contenido de passwd con pausas por cada línea</em></p></li>
             </ul>
         </div>
         
@@ -201,7 +213,7 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>less /etc/passwd</b> <em>Muestra passwd y podemos movernos por el archivo arriba y abajo</em></li>
+                <li><b>less /etc/passwd</b> <p><em>Muestra passwd y podemos movernos por el archivo arriba y abajo</em></p></li>
             </ul>
         </div>
         
@@ -212,11 +224,11 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>df -h</b> <em>Muestra los datos del espacio libre de forma comprensible para los humanos</em></li>
-                <li><b>df -m</b> <em>muestra espacio libre en megabytes</em></li>
-                <li><b>df -k</b> <em>Muestra en blokes de 1Kb (por defecto)</em></li>
-                <li><b>df -T</b> <em>Muestra tipo de sistema de archivos</em></li>
-                <li><b>df -i</b> <em>Muestra los inodos del sistemas</em></li>
+                <li><b>df -h</b> <p><em>Muestra los datos del espacio libre de forma comprensible para los humanos</em></p></li>
+                <li><b>df -m</b> <p><em>muestra espacio libre en megabytes</em></p></li>
+                <li><b>df -k</b> <p><em>Muestra en blokes de 1Kb (por defecto)</em></p></li>
+                <li><b>df -T</b> <p><em>Muestra tipo de sistema de archivos</em></p></li>
+                <li><b>df -i</b> <p><em>Muestra los inodos del sistemas</em></p></li>
                 
             </ul>
         </div>
@@ -242,7 +254,7 @@
 <div data-role="page" id="usuarios" data-theme="a">
   <div data-role="header">
 	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-    <h1>Comandos Linux - USUARIOS -</h1>
+    <h1>- USUARIOS -</h1>
   </div>
   
   
@@ -259,10 +271,10 @@
              <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
                		
-				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
-                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
             </ul>
         </div>
         
@@ -273,9 +285,9 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
                 
             </ul>
         </div>
@@ -287,9 +299,9 @@
            
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
             <ul data-role="listview" >
-                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                <li><b>cd -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -ll</b> <p><em>desarrolla tal acción </em></p></li>
                 
             </ul>
         </div>
@@ -298,23 +310,16 @@
   
   <div data-role="footer" data-position="fixed" data-id="fotterx">
     <div style="margin-left: 3.6em; " class="ui-grid-b">
-      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
-      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
-      <div class="ui-block-c"><a href="#paquetes" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back"></a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" ></a></div>
+      <div class="ui-block-c"><a href="#paquetes" data-role="button" data-icon="arrow-r" data-iconpos="notext"></a></div>
     </div>
     
   </div>
 
 </div>
   
-  <div data-role="footer" data-position="fixed" data-id="fotterx">
-    <div style="margin-left: 3.6em; " class="ui-grid-b">
-      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
-      <div class="ui-block-b"><a href="#" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
-      <div class="ui-block-c"><a href="#" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
-    </div>
-    
-  </div>
+  
 </div>
 
 <!-- 4 PAGINA ***************************************************************************** -->
@@ -322,7 +327,7 @@
 <div data-role="page" id="paquetes" data-theme="a">
   <div data-role="header">
 	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-    <h1>Comandos Linux - PAQUETES -</h1>
+    <h1>- PAQUETES -</h1>
   </div>
   
   
@@ -339,10 +344,10 @@
              <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
                		
-				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
-                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
             </ul>
         </div>
         
@@ -353,9 +358,9 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
                 
             </ul>
         </div>
@@ -367,9 +372,9 @@
            
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
             <ul data-role="listview" >
-                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                <li><b>cd -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -ll</b> <p><em>desarrolla tal acción </em></p></li>
                 
             </ul>
         </div>
@@ -379,31 +384,23 @@
   
   <div data-role="footer" data-position="fixed" data-id="fotterx">
     <div style="margin-left: 3.6em; " class="ui-grid-b">
-      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
-      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
-      <div class="ui-block-c"><a href="#apagar" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back"></a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" ></a></div>
+      <div class="ui-block-c"><a href="#apagar" data-role="button" data-icon="arrow-r" data-iconpos="notext"></a></div>
     </div>
     
   </div>
 
 </div>
   
-  <div data-role="footer" data-position="fixed" data-id="fotterx">
-    <div style="margin-left: 3.6em; " class="ui-grid-b">
-      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
-      <div class="ui-block-b"><a href="#" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
-      <div class="ui-block-c"><a href="#" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
-    </div>
-    
- 
-</div>
+
 
 <!-- CUARTA PAGINA ******************************************************************************* -->
 
 <div data-role="page" id="apagar" data-theme="a">
   <div data-role="header">
 	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-    <h1>Comandos Linux - APAGAR, REINICIAR -</h1>
+    <h1>- APAGAR, REINICIAR -</h1>
   </div>
   
   
@@ -420,10 +417,10 @@
              <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
                		
-				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
-                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
             </ul>
         </div>
         
@@ -434,9 +431,9 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
                 
             </ul>
         </div>
@@ -448,9 +445,9 @@
            
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
             <ul data-role="listview" >
-                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                <li><b>cd -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -ll</b> <p><em>desarrolla tal acción </em></p></li>
                 
             </ul>
         </div>
@@ -460,9 +457,9 @@
   
   <div data-role="footer" data-position="fixed" data-id="fotterx">
     <div style="margin-left: 3.6em; " class="ui-grid-b">
-      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
-      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
-      <div class="ui-block-c"><a href="#monitor" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back"></a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" ></a></div>
+      <div class="ui-block-c"><a href="#monitor" data-role="button" data-icon="arrow-r" data-iconpos="notext"></a></div>
     </div>
     
   </div>
@@ -474,7 +471,7 @@
 <div data-role="page" id="monitor" data-theme="a">
   <div data-role="header">
 	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-    <h1>Comandos Linux - MONITORIZACIÓN -</h1>
+    <h1>- MONITORIZACIÓN -</h1>
   </div>
   
   
@@ -491,10 +488,10 @@
              <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
                		
-				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
-                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
             </ul>
         </div>
         
@@ -505,9 +502,9 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
                 
             </ul>
         </div>
@@ -519,9 +516,9 @@
            
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
             <ul data-role="listview" >
-                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                <li><b>cd -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -ll</b> <p><em>desarrolla tal acción </em></p></li>
                 
             </ul>
         </div>
@@ -531,9 +528,9 @@
   
   <div data-role="footer" data-position="fixed" data-id="fotterx">
     <div style="margin-left: 3.6em; " class="ui-grid-b">
-      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
-      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
-      <div class="ui-block-c"><a href="#operadores" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back"></a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" ></a></div>
+      <div class="ui-block-c"><a href="#operadores" data-role="button" data-icon="arrow-r" data-iconpos="notext"></a></div>
     </div>
     
   </div>
@@ -544,7 +541,7 @@
 <div data-role="page" id="operadores" data-theme="a">
   <div data-role="header">
 	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-    <h1>Comandos Linux - OPERADORES -</h1>
+    <h1>- OPERADORES -</h1>
   </div>
   
   
@@ -561,10 +558,10 @@
              <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
                		
-				 <li><b>pwd</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -l</b> <em>desarrolla tal acción</em></li>
-                <li><b>pdw -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>pwd -b</b> <em>desarrolla tal acción</em></li>
+				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
             </ul>
         </div>
         
@@ -575,9 +572,9 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>ls -ll</b> <em>desarrolla tal acción</em></li>
+                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
                 
             </ul>
         </div>
@@ -589,9 +586,9 @@
            
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
             <ul data-role="listview" >
-                <li><b>cd -a</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -la</b> <em>desarrolla tal acción</em></li>
-                <li><b>cd -ll</b> <em>desarrolla tal acción </em></li>
+                <li><b>cd -a</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -la</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>cd -ll</b> <p><em>desarrolla tal acción </em></p></li>
                 
             </ul>
         </div>
@@ -601,9 +598,9 @@
   
   <div data-role="footer" data-position="fixed" data-id="fotterx">
     <div style="margin-left: 3.6em; " class="ui-grid-b">
-      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
-      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
-      <div class="ui-block-c"><a href="#ayuda" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back"></a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" ></a></div>
+      <div class="ui-block-c"><a href="#ayuda" data-role="button" data-icon="arrow-r" data-iconpos="notext"></a></div>
     </div>
     
   </div>
@@ -614,7 +611,7 @@
 <div data-role="page" id="ayuda" data-theme="a">
   <div data-role="header">
 	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-    <h1>Comandos Linux - AYUDA y MANUALES -</h1>
+    <h1>- AYUDA y MANUALES -</h1>
   </div>
   
   
@@ -631,9 +628,9 @@
              <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
                		
-				<li><b>man man</b> <em>muestra manual del comando man</em></li>
-                <li><b>man ls</b> <em>muestra manual del comando ls</em></li>
-                <li><b>man mount</b> <em>muestra manual del comando mount</em></li>
+				<li><b>man man</b> <p><em>muestra manual del comando man</em></p></li>
+                <li><b>man ls</b> <p><em>muestra manual del comando ls</em></p></li>
+                <li><b>man mount</b> <p><em>muestra manual del comando mount</em></p></li>
                
             </ul>
         </div>
@@ -645,9 +642,9 @@
                
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls --help</b> <em>Muesrtra una ayuda básica del comando ls</em></li>
-                <li><b>mount --help</b> <em>Muestra una ayuda básica del comando mount</em></li>
-                <li><b>mkdir --help</b> <em>Muestra una ayuda básica del comando mkdir</em></li>
+                <li><b>ls --help</b> <p><em>Muesrtra una ayuda básica del comando ls</em></p></li>
+                <li><b>mount --help</b> <p><em>Muestra una ayuda básica del comando mount</em></p></li>
+                <li><b>mkdir --help</b> <p><em>Muestra una ayuda básica del comando mkdir</em></p></li>
                 
             </ul>
         </div>
@@ -659,7 +656,7 @@
            
             <h4 style="margin-left: 2em;">Ejemplos del comando con argumentos</h4>    
             <ul data-role="listview" >
-                <li><b>whatis mount</b> <em>Muestra para qué sirve mount, pero no cómo se usa.</em></li>
+                <li><b>whatis mount</b> <p><em>Muestra para qué sirve mount, pero no cómo se usa.</em></p></li>
                               
             </ul>
         </div>
@@ -669,9 +666,9 @@
   
   <div data-role="footer" data-position="fixed" data-id="fotterx">
     <div style="margin-left: 3.6em; " class="ui-grid-b">
-      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back">Botón</a></div>
-      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" >Botón</a></div>
-      <div class="ui-block-c"><a href="#archivos" data-role="button" data-icon="arrow-r" data-iconpos="notext">Botón</a></div>
+      <div class="ui-block-a"><a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-rel="back"></a></div>
+      <div class="ui-block-b"><a href="#inicio" data-role="button" data-icon="home" data-iconpos="notext" ></a></div>
+      <div class="ui-block-c"><a href="#archivos" data-role="button" data-icon="arrow-r" data-iconpos="notext"></a></div>
     </div>
     
   </div>
