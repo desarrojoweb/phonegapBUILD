@@ -15,29 +15,9 @@
 
 <script src="jquery-mobile/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
-<script src="css/fontawesome/js/all.min.js" type="text/javascript"></script>
 
 
-<script>
-	
-	function onLoad()
-            {
-                  document.addEventListener("deviceready", onDeviceReady, true);
-            }
 
-            function exitFromApp()
-             {
-                if (navigator.app) {
-					navigator.app.exitApp();
-				} else if (navigator.device) {
-					navigator.device.exitApp();
-				} else {
-					window.close();
-				}
-             }
-	
-	
-</script>
 
 </head>
 
@@ -48,7 +28,7 @@
 <div data-role="page" id="inicio" data-theme="a">
   <div data-role="header" data-theme="a">
   	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-   	<button id="cerrar" data-role="button" data-icon="delete" data-iconpos="right" onclick="exitFromApp();"></button>
+   	
    	
    	
     <h1>Linux Comander</h1>
