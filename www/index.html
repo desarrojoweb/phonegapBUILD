@@ -27,7 +27,13 @@
 
             function exitFromApp()
              {
-                navigator.app.exitApp();
+                if (navigator.app) {
+					navigator.app.exitApp();
+				} else if (navigator.device) {
+					navigator.device.exitApp();
+				} else {
+					window.close();
+				}
              }
 	
 	
@@ -42,7 +48,8 @@
 <div data-role="page" id="inicio" data-theme="a">
   <div data-role="header" data-theme="a">
   	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-   	<a id="cerrar" data-role="button" data-icon="delete" data-iconpos="right" onclick="exitFromApp();"></a>
+   	<button id="cerrar" data-role="button" data-icon="delete" data-iconpos="right" onclick="exitFromApp();"></button>
+   	
    	
     <h1>Linux Comander</h1>
     
