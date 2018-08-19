@@ -19,8 +19,8 @@
 
 
 <script>
-	function close(){
-	navigator.app.exitApp();
+	function cerrar(){
+	window.close();
 	}
 </script>
 
@@ -33,7 +33,7 @@
 <div data-role="page" id="inicio" data-theme="a">
   <div data-role="header" data-theme="a">
   	<a href="#inicio" data-role="button" data-icon="home" data-iconpos="left">Inicio</a>
-   	<a id="cerrar" data-role="button" data-icon="delete" data-iconpos="right" onClick="window.close();"></a>
+   	<a id="cerrar" data-role="button" data-icon="delete" data-iconpos="right" onClick="cerrar();"></a>
     <h1>Linux Comander</h1>
     
   </div>
