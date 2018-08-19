@@ -257,48 +257,137 @@
   </form>
     <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="usuariox" data-input="#usuario">
        
-        <div data-role="collapsible" data-filtertext="pwd">
-            <h3 data-inset="false">pwd</h3>
-            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+        <div data-role="collapsible" data-filtertext="passwd">
+            <h3 data-inset="false">passwd</h3>
+            <p>Cambia contraseña de usuario</p>
             
-             <h4>Ejemplos del comando con argumentos</h4> 		
+             <h4>Ejemplos del comando</h4> 		
              <ul data-role="listview" >
                		
-				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
+				 <li><b>passwd</b> <p><em>Cambiamos la contraseña del usuario con el que estemos logueados</em></p></li>
+                <li><b>sudo passwd pepe</b> <p><em>Cambiamos la contraseña del usuario pepe desde otro usuario logueado</em></p></li>
+                <li><b>sudo passwd -S pepe</b> <p><em>Indica el estado de las contraseñas del usuario pepe. (Bloqueada si/no , última modificación de la clave, etc...)</em></p></li>
             </ul>
         </div>
         
-        <div data-role="collapsible" data-filtertext="ls">
-            <h3  data-inset="false">ls</h3>
-            <p>Lista el contenido del directorio actual del promnt</p>
+        <div data-role="collapsible" data-filtertext="chmod">
+            <h3  data-inset="false">chmod</h3>
+            <p>Gestiona permisos de un fichero</p>
            
                
             <h4>Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
+                <li><b>chmod 777 file.txt</b> <p><em>Permisos de lectura, escritura y ejecución para todos los usuarios</em></p></li>
+                <li><b>chmod 666 file.txt</b> <p><em>Permisos de lectura y escritura pero NO ejecución para todos los usuarios</em></p></li>
+                <li><b>chmod 766 file.txt</b> <p><em>Permisos de lectura, escritura y ejecución para el dueño del fichero. Permisos de lectura y escritura para usuarios que permanezcan al mismo grupo y los otros (todos los demás)</em></p></li>
+                <li><b>chmod 733 file.txt</b> <p><em>Acceso total al propietario. Escritura y ejecución al grupo y a los otros</em></p></li>
+                <li><b>chmod 555 file.txt</b> <p><em>Permisos de lectura y ejecución al dueño, grupo y otros</em></p></li>
+                <li><b>chmod +r file.txt</b> <p><em>Permisos de Lectura a todos los usuarios</em></p></li>
+                <li><b>chmod u+w file.txt</b> <p><em>Permisos de escritura al dueño</em></p></li>
+                <li><b>chmod -x file.txt</b> <p><em> Quita, resta, permisos de ejecición a todos los usuarios</em></p></li>
                 
             </ul>
         </div>
         
            
-        <div data-role="collapsible" data-filtertext="cd">
-            <h3  data-inset="false">cd</h3>
-            <p>Lista el contenido del directorio actual del promnt</p>
+        <div data-role="collapsible" data-filtertext="chown">
+            <h3  data-inset="false">chown</h3>
+            <p>Cambia propietario de un fichero (archivo o directorio)</p>
            
             <h4>Ejemplos del comando con argumentos</h4>    
             <ul data-role="listview" >
-                <li><b>cd -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>cd -la</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>cd -ll</b> <p><em>desarrolla tal acción </em></p></li>
+                <li><b>chown NuevoPorpietario /home/pepe/documentos/file.pdf</b> <p><em>Cambia de dueño el archivo file.pdf</em></p></li>
+                <li><b>chown -R NuevoPropietario /home/pepe/desacargas/carperta1</b> <p><em>Es recursivo (-R) Cambia de dueño el directorio "carpeta1" y todo el contenido que haya en su interior</em></p></li>
+                
                 
             </ul>
         </div>
         
+        <div data-role="collapsible" data-filtertext="sudo">
+            <h3  data-inset="false">sudo</h3>
+            <p>Ejecuta comandos con privilegios de superusuario. (SuperUser do). Requiere contraseña</p>
+           
+            <h4>Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>sudo chmod 777 file.txt</b> <p><em>Otorga permisos de ejecución de SuperUsuario al comando chmod</em></p></li>
+             </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="su">
+            <h3  data-inset="false">su</h3>
+            <p>Cambio de usuario. Requiere contraseña</p>
+           
+            <h4>Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>su pepe</b> <p><em>Permite loguearse con el usuario pepe</em></p></li>
+                <li><b>su -</b> <p><em>Permite loguearse como root</em></p></li>
+             </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="groupadd">
+            <h3  data-inset="false">groupadd</h3>
+            <p>Crea un nuevo grupo de usuarios</p>
+           
+            <h4>Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>groupadd testers</b> <p><em>Crea grupo "testers"</em></p></li>
+             </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="groupdel">
+            <h3  data-inset="false">groupdel</h3>
+            <p>Borra grupo existente</p>
+           
+            <h4>Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>groupdel testers</b> <p><em>Borra grupo "testers"</em></p></li>
+             </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="adduser">
+            <h3  data-inset="false">adduser</h3>
+            <p>Crea nuevo usuario. Crea también su carpeta Home. Es un Script programado en Perl</p>
+           
+            <h4>Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>adduser juan</b> <p><em>Crea usuario Juan y su carpeta home</em></p></li>
+             </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="useradd">
+            <h3  data-inset="false">useradd</h3>
+            <p>Crea usuario pero no crea su carpeta home. Es un programa binario y funciona en todas las distros.</p>
+           
+            <h4>Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>useradd juan</b> <p><em>Crea al usuario juan SIN crear su carpeta Home</em></p></li>
+                <li><b>useradd -m juan</b> <p><em>Crea al usuario juan y ahora sí, (-m) crea su carpeta home</em></p></li>
+                <li><b>useradd -m -g UnGrupo -G OtroGrupo pepe</b> <p><em>Creamos el usuario pepe que pertenecerá a dos grupos: "UnGrupo" y "OtroGrupo"</em></p></li>
+             </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="deluser">
+            <h3  data-inset="false">deluser</h3>
+            <p>Borra usuario y también su carpeta home</p>
+           
+            <h4>Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>deluser juan</b> <p><em>Borra usuario juan y su carpeta Home</em></p></li>
+             </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="userdel">
+            <h3  data-inset="false">userdel</h3>
+            <p>Borra usuario SIN borrar su carpeta Home</p>
+           
+            <h4>Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>userdel juan</b> <p><em>Borra a juan pero no su Home</em></p></li>
+             </ul>
+        </div>
+
+        
+                        
     </div>
   
   <div data-role="footer" class="fot" data-position="fixed" data-id="fotterx">
@@ -330,31 +419,38 @@
   </form>
     <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="paquetex" data-input="#paquete">
        
-        <div data-role="collapsible" data-filtertext="pwd">
-            <h3 data-inset="false">pwd</h3>
-            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+        <div data-role="collapsible" data-filtertext="dpkg">
+            <h3 data-inset="false">dpkg</h3>
+            <p>Instala paquetes .deb existentes en el sistema. No descarga nada</p>
             
              <h4>Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
                		
-				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
+				<li><b>dpkg -i man-db_2.7.0.2-5_amd64.deb</b> <p><em>Instala el paquete</em></p></li>
+                <li><b>dpkg --unpack man-db_2.7.0.2-5_amd64.deb</b> <p><em>Desempaqueta paquete sin instalarlo</em></p></li>
+                <li><b>dpkg --configure man-db</b> <p><em>Instala paquete previamente desempaquetado. Esto sirve para depurar posibles errores</em></p></li>
+                <li><b>dkpg -r man-db_2.7.0.2-5_amd64.deb</b> <p><em>Elimina el paquete pero persisten los archivos de configuración. Si más tarde se reinstala el paquete, se conserva la configuración que teníamos antes de desinstalarlo</em></p></li>
+                <li><b>dpkg -P man-db_2.7.0.2-5_amd64.deb</b> <p><em>Se desintala el paquete y todos los archivos de configuración.</em></p></li>
             </ul>
         </div>
         
-        <div data-role="collapsible" data-filtertext="ls">
-            <h3  data-inset="false">ls</h3>
-            <p>Lista el contenido del directorio actual del promnt</p>
+        <div data-role="collapsible" data-filtertext="apt">
+            <h3  data-inset="false">apt</h3>
+            <p>Encuentra, instala y actualiza paquetes a través de la red y sus repositorios</p>
            
                
             <h4>Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
-                
+                <li><b>sudo apt update</b> <p><em>Actualiza la base de datos de paquetes. No podemos instalar un paquete cuya existencia desconoce la máquina</em></p></li>
+                <li><b>sudo apt upgrade</b> <p><em>Actualizamos los paquetes que tenemos instalados en nuestro equipo</em></p></li>
+                <li><b>sudo apt full-upgrade</b> <p><em>Actualización de paquetes instalados en nuestro equipo de manera más intensa y profunda</em></p></li>
+                <li><b>sudo apt install mplayer</b> <p><em>Descarga e instala el paquete mplayer</em></p></li>
+                <li><b>sudo apt install [paquete1] [paquete2] [paquete3]</b> <p><em>Instalación de varios paquetes en una misma línea de comando. (Sin corchetes)</em></p></li>
+                <li><b>sudo apt remove mplayer</b> <p><em>desarrolla tal acciónDesinstala el paquete mplayer pero se conservan los arhivos de configuración del mismo. Si reinstalamos el paquete, mantedríamos la configuración previa</em></p></li>	
+                <li><b>sudo apt purge mplayer</b> <p><em>Desinstala el paquete mplayer y borra los archivos de configuración del mismo</em></p></li>
+                <li><b>apt search [unaBusqueda]</b> <p><em>Buscamos algo dentro de los repositorios que tengamos configurados. (Sin los corchetes)</em></p></li>
+                <li><b>apt show mplayer</b> <p><em>vemos el contenido de un paquete, sus dependencias, tamaño, descripciones, etc.</em></p></li>
+                <li><b>sudo apt autoremove</b> <p><em> elimina librerias y paquetes que se instalaron automáticamente para completar la instalación de un paquete que queríamos instalar</em></p></li>
             </ul>
         </div>
         
@@ -403,46 +499,63 @@
   </form>
     <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="apagado" data-input="#apaga">
        
-        <div data-role="collapsible" data-filtertext="pwd">
-            <h3 data-inset="false">pwd</h3>
-            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+        <div data-role="collapsible" data-filtertext="shutdown">
+            <h3 data-inset="false">shutdown</h3>
+            <p>Apagar equipo y reiniciar</p>
             
              <h4>Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
                		
-				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
+				<li><b>shutdown -h now</b> <p><em>Apaga equipo ahora</em></p></li>
+           		<li><b>shutdown -h 30</b> <p><em>Apaga equipo en 30 minutos</em></p></li>
+           		<li><b>shutdown -h 22:05 </b> <p><em>Apaga equipo a las 22:05</em></p></li>
+           		<li><b>shutdown -r now </b> <p><em>Reinicia equipo ahora</em></p></li>
+           		<li><b>shutdown -r 30 </b> <p><em>Reinicia equipo en 30 minutos</em></p></li>
+           		<li><b>shutdown -r 22:05 </b> <p><em>Reincia equipo a las 22:05</em></p></li>
+           		<li><b>shutdown -c </b> <p><em>Cancela tarea de reinicio o apagado programada previamente</em></p></li>
             </ul>
         </div>
         
-        <div data-role="collapsible" data-filtertext="ls">
-            <h3  data-inset="false">ls</h3>
-            <p>Lista el contenido del directorio actual del promnt</p>
+        <div data-role="collapsible" data-filtertext="init">
+            <h3  data-inset="false">init</h3>
+            <p>Apaga sistema</p>
            
                
             <h4>Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
-                
+                <li><b>init 0</b> <p><em>Apaga el equipo</em></p></li>
             </ul>
         </div>
         
            
-        <div data-role="collapsible" data-filtertext="cd">
-            <h3  data-inset="false">cd</h3>
-            <p>Lista el contenido del directorio actual del promnt</p>
+        <div data-role="collapsible" data-filtertext="halt">
+            <h3  data-inset="false">halt</h3>
+            <p>Apaga sistema</p>
            
             <h4>Ejemplos del comando con argumentos</h4>    
             <ul data-role="listview" >
-                <li><b>cd -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>cd -la</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>cd -ll</b> <p><em>desarrolla tal acción </em></p></li>
-                
-            </ul>
+                <li><b>halt</b> <p><em>Apaga equipo</em></p></li>
+             </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="reboot">
+            <h3 data-inset="false">reboot</h3>
+            <p>Reinicia equipo</p>
+            
+             <h4>Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+               <li><b>reboot</b> <p><em>Reinicia equipo ahora</em></p></li>
+           	</ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="logout">
+            <h3 data-inset="false">logout</h3>
+            <p>Cierra sesión</p>
+            
+             <h4>Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+              <li><b>logout</b> <p><em>Cierra sesión ahora</em></p></li>
+           	</ul>
         </div>
         
     </div>
@@ -474,45 +587,53 @@
   </form>
     <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="monit" data-input="#moni">
        
-        <div data-role="collapsible" data-filtertext="pwd">
-            <h3 data-inset="false">pwd</h3>
-            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+        <div data-role="collapsible" data-filtertext="top">
+            <h3 data-inset="false">top</h3>
+            <p>Permite ver y administrar procesos en ejecución. Podemos consultar el PID de los procesos para realizar un kill [pid] y cerrar el proceso. Existe una herramienta llamada "htop" que permite lo mismo que top y además es posible interactuar con los procesos y cerrarlos. (sudo apt-get install htop)</p>
+             
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="netstat">
+            <h3  data-inset="false">netstat</h3>
+            <p>Muestra estadísticas de red</p>
+        
+        </div>
+        
+           
+        <div data-role="collapsible" data-filtertext="lsof">
+            <h3  data-inset="false">lsof</h3>
+            <p>Útil para consultar qué ficheros está siendo usados por qué procesos.</p>
+           
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="kill">
+            <h3 data-inset="false">kill</h3>
+            <p>Cierra procesos abiertos</p>
             
              <h4>Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
-               		
-				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
+              <li><b>kill -9 pidProceso</b> <p><em>cierra proceso que tenga ese PID</em></p></li>
+              <li><b>kill -1 pidProceso</b> <p><em>fuerza volver a cargar la configuración del proceso con ese PID</em></p></li>
+           	</ul>
+        </div>
+		
+		<div data-role="collapsible" data-filtertext="free">
+            <h3 data-inset="false">free</h3>
+            <p>Muestra RAM</p>
+            
+             <h4>Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+              <li><b>free -m</b> <p><em>Muestra RAM en MB</em></p></li>
             </ul>
         </div>
         
-        <div data-role="collapsible" data-filtertext="ls">
-            <h3  data-inset="false">ls</h3>
-            <p>Lista el contenido del directorio actual del promnt</p>
-           
-               
-            <h4>Ejemplos del comando con argumentos</h4> 
-            <ul data-role="listview" >
-                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
-                
-            </ul>
-        </div>
-        
-           
-        <div data-role="collapsible" data-filtertext="cd">
-            <h3  data-inset="false">cd</h3>
-            <p>Lista el contenido del directorio actual del promnt</p>
-           
-            <h4>Ejemplos del comando con argumentos</h4>    
-            <ul data-role="listview" >
-                <li><b>cd -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>cd -la</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>cd -ll</b> <p><em>desarrolla tal acción </em></p></li>
-                
+        <div data-role="collapsible" data-filtertext="ps">
+            <h3 data-inset="false">ps</h3>
+            <p>Muestra listado de procesos abiertos</p>
+            
+             <h4>Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+              <li><b>ps aux</b> <p><em>Muestra procesos abiertos y su PID</em></p></li>
             </ul>
         </div>
         
@@ -544,45 +665,36 @@
   </form>
     <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div h3" data-inset="true" id="operax" data-input="#opera">
        
-        <div data-role="collapsible" data-filtertext="pwd">
-            <h3 data-inset="false">pwd</h3>
-            <p>Muestra el directorio actual de trabajo, el lugar que guarda el promnt</p>
+        <div data-role="collapsible" data-filtertext=">">
+            <h3 data-inset="false">&#62</h3>
+            <p>Redirige la salida de un comando a donde le digamos. La salida por defecto es el monitor, sin embargo, podemos indicar que queremos esa salida del comando (lo que se muestra en el monitor) en otro sitio</p>
             
              <h4>Ejemplos del comando con argumentos</h4> 		
              <ul data-role="listview" >
                		
-				 <li><b>pwd</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -l</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pdw -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>pwd -b</b> <p><em>desarrolla tal acción</em></p></li>
+				 <li><b>ls &#62 listado </b> <p><em>Con este comando conseguirmos que se escriba un fichero llamado "listado" cuyo contenido sea la salida del comando ls, es decir, el fichero "listado" contendrá un listado del contenido de la carpeta donde se hizo el ls. Especial atención, a que al escribir este operador, SIEMPRE se va a sustituir el contenido del archivo "listado" por la salida correspondiente. Es decir, este operador, borra y escribe la salida. </em></p></li>
             </ul>
         </div>
         
-        <div data-role="collapsible" data-filtertext="ls">
-            <h3  data-inset="false">ls</h3>
-            <p>Lista el contenido del directorio actual del promnt</p>
+        <div data-role="collapsible" data-filtertext=">>">
+            <h3 data-inset="false">&#62&#62</h3>
+            <p>Redirige la salida de un comando a donde le digamos. La salida por defecto es el monitor, sin embargo, podemos indicar que queremos esa salida del comando (lo que se muestra en el monitor) en otro sitio</p>
+            
+             <h4>Ejemplos del comando con argumentos</h4> 		
+             <ul data-role="listview" >
+               		
+				 <li><b>ls &#62&#62 listado </b> <p><em>Igual que el anterior solo permanecen los datos anteriores que hubiera en el fichero "listado". No borra; añade.</em></p></li>
+            </ul>
+        </div>
+        
+        <div data-role="collapsible" data-filtertext="|">
+            <h3  data-inset="false">&#124</h3>
+            <p>Este operador es conocido por el nombre de tuberías. Lo que conseguimos es que la salida del primer comando sea la entrada del segundo comando. En cierta manera, me lo imagino como un "and". En los ejemplos queda más claro.</p>
            
                
             <h4>Ejemplos del comando con argumentos</h4> 
             <ul data-role="listview" >
-                <li><b>ls -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -la</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>ls -ll</b> <p><em>desarrolla tal acción</em></p></li>
-                
-            </ul>
-        </div>
-        
-           
-        <div data-role="collapsible" data-filtertext="cd">
-            <h3  data-inset="false">cd</h3>
-            <p>Lista el contenido del directorio actual del promnt</p>
-           
-            <h4>Ejemplos del comando con argumentos</h4>    
-            <ul data-role="listview" >
-                <li><b>cd -a</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>cd -la</b> <p><em>desarrolla tal acción</em></p></li>
-                <li><b>cd -ll</b> <p><em>desarrolla tal acción </em></p></li>
-                
+                <li><b>ls &#124 less</b> <p><em>Con esto conseguimos que se muestre el listado correspondiente a ls y a la vez que se muestre línea a línea gracias a less. Es decir, conseguimos listar el contenido de una carpeta (ls), línea a línea (less) </em></p></li>
             </ul>
         </div>
         
@@ -643,6 +755,17 @@
         </div>
         
            
+        <div data-role="collapsible" data-filtertext="whatis">
+            <h3  data-inset="false">whatis</h3>
+            <p>Ayuda muy breve de cualquier comando. Información muy reducida</p>
+           
+            <h4>Ejemplos del comando con argumentos</h4>    
+            <ul data-role="listview" >
+                <li><b>whatis mount</b> <p><em>Muestra para qué sirve mount, pero no cómo se usa.</em></p></li>
+                              
+            </ul>
+        </div>
+        
         <div data-role="collapsible" data-filtertext="whatis">
             <h3  data-inset="false">whatis</h3>
             <p>Ayuda muy breve de cualquier comando. Información muy reducida</p>
